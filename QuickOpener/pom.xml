@@ -33,8 +33,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.5.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -143,23 +143,51 @@
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-text</artifactId>
             <version>${version.netbeans}</version>
-        </dependency>
+        </dependency>  
+            
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-modules-javahelp</artifactId>
             <version>${version.netbeans}</version>
         </dependency>
+   
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util-ui</artifactId>
+            <version>${version.netbeans}</version>
+        </dependency>     
+        
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-filesystems-nb</artifactId>
+            <version>${version.netbeans}</version>
+        </dependency>     
+        
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-modules-projectuiapi-base</artifactId>
+            <version>${version.netbeans}</version>
+        </dependency>     
+        
+        <!-- https://mvnrepository.com/artifact/javax.help/javahelp -->
+        <dependency>
+            <groupId>javax.help</groupId>
+            <artifactId>javahelp</artifactId>
+            <version>2.0.05</version>
+        </dependency>
+
+
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <version.netbeans>RELEASE802</version.netbeans>
+        <version.netbeans>RELEASE126</version.netbeans>
         <keystore>${project.build.outputDirectory}/keystore</keystore>
     </properties>
     <name>QuickOpener</name>
     <description>
     &lt;p&gt;Sometimes while programming in NetBeans you want to explore a particular file that you are editing on the file system browser, or maybe launch a command in a terminal to do something with it.
     &lt;/p&gt;&lt;p&gt;This plugins brings to your NetBeans six action, three of them always available and three of them available when the selected node has a file assiociated with it. 
-    In particular:&lt;/p&gt;&lt;p&gt;&lt;em&gt;When the selection has a valid file:&lt;/em&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Open the default OS shell&lt;/strong&gt; on the location of the file (or its folder) selected.
+        In particular:&lt;/p&gt;&lt;p&gt;&lt;em&gt;When the selection has a valid file:&lt;/em&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Open the default OS shell&lt;/strong&gt; on the location of the file (or its folder) selected.
     &lt;/li&gt;&lt;li&gt;&lt;strong&gt;Open the file system browser&lt;/strong&gt; on the location of the file (or its folder) selected.
     &lt;/li&gt;&lt;li&gt;&lt;strong&gt;Copy to the clipboard&lt;/strong&gt; the path of the file selected.
     &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;em&gt;Always enabled:&lt;/em&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Launch a shell command&lt;/strong&gt; (with parameters, customizable on preferences)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;FileSystem browser on any location&lt;/strong&gt; (favorites, customizable on preferences)&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Open a shell on any location&lt;/strong&gt; (favorites, customizable on preferences)&lt;/li&gt;&lt;/ul&gt;
